@@ -1,14 +1,15 @@
 const Contacto = `
-<div class="container-fluid"> 
-<div class="card mb-3" style="max-width: 540px;">
+<div class="container-fluid" id=Carta> 
+<div class="card mb-3" style="max-width: 750px;">
 <div class="row no-gutters">
     <div class="col-md-4">
      <img src="./Imagenes/avatar-persona.jpg" class="card-img" alt="avatar">
     </div>
     <div class="col-md-8">
     <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+         <h5 class="card-title">Quien soy?</h5>
+        <p class="card-text">Hola a todos, me presento mi nombre es Alexandru Tir.
+        Soy un full stack developer que esta estudiando en la academia GeeksHubs, tengo 27 años y son de Rumania, <br> Para mas informacion teneis un formulario de contacto con el que podeis contactar conmigo y en el mas breve periodo de tiempo me pondre en contacto con ustedes. <br> <br>Si echais un ojo por mi portfolio vereis un apartado llamado proyectos en el cual podeis ver mis trabajos realizados. <br> <br>Un saludo.</p>
     </div>
     </div>
 </div>
@@ -23,8 +24,8 @@ const Contacto = `
 <input type="email" class="form-control" id="inputEmail4">
 </div>
 <div class="form-group col-md-6">
-<label for="inputPassword4">Password</label>
-<input type="password" class="form-control" id="inputPassword4">
+<label for="inputName4">Name</label>
+<input type="text" class="form-control" id="inputName4">
 </div>
 </div>
 <div class="form-group">
@@ -32,8 +33,8 @@ const Contacto = `
 <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
 </div>
 <div class="form-group">
-<label for="inputAddress2">Address 2</label>
-<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+<label for="inputAddress2">Where you found me ?</label>
+<input type="text" class="form-control" id="inputFound" placeholder="Git, Instagram, Youtube, other?">
 </div>
 <div class="form-row">
 <div class="form-group col-md-6">
@@ -44,7 +45,9 @@ const Contacto = `
 <label for="inputState">State</label>
 <select id="inputState" class="form-control">
 <option selected>Choose...</option>
-<option>...</option>
+<option>Barcelona</option>
+<option>Madrid</option>
+<option>Valencia</option>
 </select>
 </div>
 <div class="form-group col-md-2">
@@ -54,13 +57,9 @@ const Contacto = `
 </div>
 <div class="form-group">
 <div class="form-check">
-<input class="form-check-input" type="checkbox" id="gridCheck">
-<label class="form-check-label" for="gridCheck">
-Check me out
-</label>
 </div>
 </div>
-<button type="submit" class="btn btn-primary">Sign in</button>
+<button type="submit" class="btn btn-primary">Send.</button>
 </div>
 </form>`
 
