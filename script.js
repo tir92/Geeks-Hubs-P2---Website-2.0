@@ -1,4 +1,4 @@
-const Contacto ='
+const Contacto = `
 <div class="container-fluid"> 
 <div class="card mb-3" style="max-width: 540px;">
 <div class="row no-gutters">
@@ -62,28 +62,25 @@ Check me out
 </div>
 <button type="submit" class="btn btn-primary">Sign in</button>
 </div>
-</form>
-</main>'
-
-
-const Contacto = `<div class="Experiencia">
-                    <h2> Portfolio </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam dolor ea velit repudiandae libero unde nisi numquam explicabo possimus sit odit architecto minus neque, ullam quidem deserunt adipisci impedit facilis delectus aspernatur? Minima corrupti a dignissimos reiciendis nulla magni praesentium ducimus placeat sed, distinctio, obcaecati consequatur doloribus rem nihil labore dolore! Placeat dolorum tempora deleniti? Voluptatibus cupiditate ab consectetur tempore voluptates aliquam, eius neque sunt vero quod. Magni maxime maiores consequuntur iusto minima quis voluptates amet sequi iste ex..
-                    </p>
-                </div>`
+</form>`
 
 const Formacion = `<div class="Formacion">
-                    <h2> Contacto </h2>
+                    <h2> Formacion </h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis adipisci accusantium fuga corrupti vitae iste, deleniti odit perferendis rem..
                     </p>
                 </div>`;
 
 
 const Proyectos = `<div class="Proyectos ">
-                    <h2> Portfolio </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam dolor ea velit repudiandae libero unde nisi numquam explicabo possimus sit odit architecto minus neque, ullam quidem deserunt adipisci impedit facilis delectus aspernatur? Minima corrupti a dignissimos reiciendis nulla magni praesentium ducimus placeat sed, distinctio, obcaecati consequatur doloribus rem nihil labore dolore! Placeat dolorum tempora deleniti? Voluptatibus cupiditate ab consectetur tempore voluptates aliquam, eius neque sunt vero quod. Magni maxime maiores consequuntur iusto minima quis voluptates amet sequi iste ex..
-                    </p>
-                </div>`
+                <h2> Proyecto </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam dolor ea velit repudiandae libero unde nisi numquam explicabo possimus sit odit architecto minus neque, ullam quidem deserunt adipisci impedit facilis delectus aspernatur? Minima corrupti a dignissimos reiciendis nulla magni praesentium ducimus placeat sed, distinctio, obcaecati consequatur doloribus rem nihil labore dolore! Placeat dolorum tempora deleniti? Voluptatibus cupiditate ab consectetur tempore voluptates aliquam, eius neque sunt vero quod. Magni maxime maiores consequuntur iusto minima quis voluptates amet sequi iste ex..
+                </p>
+            </div>`
+const Experiencia = `<div class="Proyectos ">
+            <h2> Experiencia </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aperiam dolor ea velit repudiandae libero unde nisi numquam explicabo possimus sit odit architecto minus neque, ullam quidem deserunt adipisci impedit facilis delectus aspernatur? Minima corrupti a dignissimos reiciendis nulla magni praesentium ducimus placeat sed, distinctio, obcaecati consequatur doloribus rem nihil labore dolore! Placeat dolorum tempora deleniti? Voluptatibus cupiditate ab consectetur tempore voluptates aliquam, eius neque sunt vero quod. Magni maxime maiores consequuntur iusto minima quis voluptates amet sequi iste ex..
+            </p>
+        </div>`
 
 
 
@@ -94,31 +91,36 @@ window.addEventListener('load', () => {
         main.innerHTML = Experiencia
     } else if (window.location.hash === '#Formacion') {
         main.innerHTML = Formacion
-        else if (window.location.hash === '#Poryectos') {
-            main.innerHTML = Proyectos
+    } else if (window.location.hash === '#Poryectos') {
+        main.innerHTML = Proyectos
     } else {
         main.innerHTML = Contacto
     }
 })
 let widthProgressBar = 0;
-document.querySelector('.Contacto').addEventListener('click', () => {
-    main.innerHTML = Home;
+document.querySelector('.contactButton').addEventListener('click', () => {
+    main.innerHTML = Contacto;
     window.scrollTo({
         top: 400,
         behavior: 'smooth',
-      })
-      setTimeout(() => {
-          document.body.scrollIntoView({ behavior: 'smooth' })
-      }, 1000);
-    document.querySelector('.progress-bar').style.width = '33.33%'
+    })
+    setTimeout(() => {
+        document.body.scrollIntoView({
+            behavior: 'smooth'
+        })
+    }, 1000);
     history.pushState({}, '', '#');
 })
-document.querySelector('.Formacion').addEventListener('click', () => {
+document.querySelector('.formacionButton').addEventListener('click', () => {
     main.innerHTML = Formacion;
-    document.querySelector('.progress-bar').style.width = '66.66%'
     history.pushState({}, '', '#Formacion');
 })
-document.querySelector('.ContactoButton').addEventListener('click', () => {
+document.querySelector('.expButton').addEventListener('click', () => {
     main.innerHTML = Experiencia;
-    document.querySelector('.progress-bar').style.width = '100%'
     history.pushState({}, '', '#Experiencia');
+})
+
+document.querySelector('.proyectButon').addEventListener('click', () => {
+    main.innerHTML = Proyectos;
+    history.pushState({}, '', '#Proyectos');
+})
